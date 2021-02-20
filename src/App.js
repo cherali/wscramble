@@ -130,7 +130,7 @@ function App() {
             word && word?.split('').map((item, i) => (
               <WordCharContainer key={i}>
                 <span onClick={handleRemoveChar(i)}>×</span>
-                <WordContent>{item.toLowerCase()}</WordContent>
+                <WordContent>{item}</WordContent>
               </WordCharContainer>
             ))
           }
@@ -158,7 +158,7 @@ function App() {
           {
             chars.map((char, i) => (
               <CharContainer key={i} className='noselect'>
-                <CharContent onClick={handleClick(char)}>{char.toLowerCase()}</CharContent>
+                <CharContent onClick={handleClick(char)}>{char}</CharContent>
               </CharContainer>
             ))
           }
